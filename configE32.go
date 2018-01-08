@@ -144,7 +144,7 @@ func (config *E32config) Print() {
 func (config *E32config) PrintConfig() {
 	SerialParity := []string{"8N1", "8O1", "8E1", "8N13"}
 	SerialRate := []int{1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200}
-	WirelessRate := []int{1, 2, 5, 10, 15, 20, 25}
+	WirelessRate := []int{1, 2, 5, 8, 10, 15, 20, 25}
 	TranmissionMode := []string{"transparent", "fixed"}
 	IoMode := []string{"open", "push-pull"}
 	c := config.Bytes()
