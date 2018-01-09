@@ -3,8 +3,8 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"go-e32-lora/lora"
 	"log"
-	"lora"
 	"os"
 	"os/signal"
 	"strings"
