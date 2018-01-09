@@ -1,6 +1,8 @@
 # go-E32-lora: A E32-TTL-100 Lora Toolkit
 
-This project makes the cheap E32-TTL-100 lora chips accessible through an easy library and some command line tools.
+This project makes the cheap E32-TTL-100 lora chips accessible through an easy library and some command line tools. A dialog based gui is provided to generate hex configs for the E32 chip.
+
+![Animated gif showing a e32config session](doc/output.gif)
 
 
 ## Installation
