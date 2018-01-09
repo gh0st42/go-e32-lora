@@ -36,7 +36,7 @@ const (
 	WirelessRate20K = 6
 	WirelessRate25K = 7
 
-	Channel433 = 0x17
+	Channel433 = 0x50
 
 	TransmissionModeTransparent = 0 << 7
 	TransmissionModeFixed       = 1 << 7
