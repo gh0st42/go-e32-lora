@@ -43,7 +43,7 @@ func GpioSet(p1, p2, level uint8) {
 		m0.High()
 		m1.High()
 	}
-
+	Wait()
 	rpio.Close()
 }
 func GpioGet(p1, p2 uint8) uint8 {
@@ -63,6 +63,7 @@ func GpioGet(p1, p2 uint8) uint8 {
 	m1.Input()
 
 	res := uint8(m0.Read()) + uint8(m1.Read())
+	Wait()
 
 	rpio.Close()
 	return res

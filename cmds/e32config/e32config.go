@@ -189,6 +189,7 @@ func ApplyConfig(c string) {
 			if mode == 0 {
 				lora.GpioSet(17, 27, 1)
 			}
+			lora.Wait()
 		} else {
 			fmt.Println("Please ensure that config mode is set manually")
 		}
@@ -196,21 +197,21 @@ func ApplyConfig(c string) {
 		decoded, err := hex.DecodeString(c)
 		if err != nil {
 			log.Fatal(err)
-			os.Exit(1)
 		}
 		if len(decoded) != 6 {
-			log.Fatal("Hex string to short for e32 config!")
-			os.Exit(1)
+			log.Fatal("Hex string too short for e32 config!")
 		}
 		port := lora.GetSerial()
 		// Make sure to close it later.
 		defer port.Close()
+
 		fmt.Printf("Writing config (%s) ..\n", c)
 		_, err = port.Write(decoded)
 		if err != nil {
 			log.Fatal(err)
-			os.Exit(1)
 		}
+		lora.Wait()
+
 		if lora.IsPiInternal() {
 			if mode == 0 {
 				lora.GpioSet(17, 27, 0)
@@ -219,7 +220,6 @@ func ApplyConfig(c string) {
 
 	} else {
 		log.Fatalln("Invalid config string!")
-		os.Exit(1)
 	}
 }
 func usage() {

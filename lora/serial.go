@@ -4,6 +4,7 @@ import (
 	"io"
 	"log"
 	"os"
+	"time"
 
 	"github.com/jacobsa/go-serial/serial"
 )
@@ -30,4 +31,8 @@ func GetSerial() io.ReadWriteCloser {
 	// Make sure to close it later.
 	// defer port.Close()
 	return port
+}
+
+func Wait() {
+	time.Sleep(6 * time.Millisecond)
 }
