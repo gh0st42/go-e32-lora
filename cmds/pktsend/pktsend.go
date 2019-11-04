@@ -1,7 +1,7 @@
 package main
 
 import (
-	"go-e32-lora/lora"
+	"../../lora"
 	"log"
 	"math/rand"
 	"os"

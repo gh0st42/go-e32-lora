@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"encoding/hex"
 	"fmt"
-	"go-e32-lora/lora"
+	"../../lora"
 	"log"
 	"os"
 	"strconv"

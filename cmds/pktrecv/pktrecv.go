@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"go-e32-lora/lora"
+	"../../lora"
 	"log"
 	"os"
 	"os/signal"
