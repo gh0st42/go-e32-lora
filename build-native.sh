@@ -1,5 +1,7 @@
 #!/bin/sh
 
+GO111MODULE=auto
+
 OUTPATH=out/native
 mkdir -p $OUTPATH
 

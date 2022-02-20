@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"../../lora"
+	"github.com/gh0st42/go-e32-lora/lora"
 	"log"
 	"os"
 	"os/signal"
